@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/KB_Bank.png" alt="https://id.m.wikipedia.org/wiki/Berkas:KB_Bank.png">	
+
+
+<title>REPORT PAYMENT AGENCY</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<style>
+    /*  */
+    body {
+      background-color: #9932CC;
+    }
+    #form-container {
+      width: 500px;
+      margin: 0 auto;
+      background-color: #f1f1f7;
+      border: 2px solid #da0808;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    #form-container h2 {
+      text-align: center;
+      color: #1E90FF;
+    }
+    #form-container na
+    #form-container input[type="text"], #form-container input[type="date"], #form-container input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #f1d0d0;
+      border-radius: 5px;
+    }
+    #form-container input[type="submit"] {
+      background-color: #1E90FF;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    #form-container input[type="submit"]:hover {
+      background-color: #004B8D;
+    }
+    #footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #f7f1f1;
+    }
+
+    body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Latar belakang halaman */
+        }
+
+        #clock {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.6); /* Latar belakang jam dengan transparansi */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #time {
+            font-size: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #date {
+            font-size: 18px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+body {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b7/Foto_kantor_KB_Bukopin.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+h5{
+  color: #da0808;
+  font-style: italic;
+  
+} 
+
+</style>
+
+
+</head>
+
+<body>
+  
+  <div id="clock">
+    <div id="time"></div>
+    <div id="date"></div>
+</div>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+
+        // Waktu
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        const timeString = `${hours}:${minutes}:${seconds}`;
+
+        // Tanggal dengan nama bulan
+        const day = now.getDate();
+        const month = now.getMonth();
+        const year = now.getFullYear();
+
+        // Nama bulan dalam bahasa Indonesia
+        const monthNames = [
+            'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+            'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+        ];
+
+        const dateString = `${day < 10 ? '0' + day : day} ${monthNames[month]} ${year}`;
+
+        // Menampilkan waktu dan tanggal
+        document.getElementById('time').textContent = timeString;
+        document.getElementById('date').textContent = dateString;
+
+        // Set warna acak untuk tanggal
+        document.getElementById('date').style.color = getRandomColor();
+        // Set warna putih untuk jam
+        document.getElementById('time').style.color = "white";
+    }
+
+    // Fungsi untuk mendapatkan warna acak
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Perbarui jam dan tanggal setiap detik
+    setInterval(updateClock, 1000);
+
+    // Panggil sekali di awal
+    updateClock();
+</script>
+  
+  <div id="form-container">
+    <h2 style="border:2px solid DodgerBlue;">REPORT PAYMENT AGENCY</h2>
+
+<h2 style="color:black;">Pastikan diisi dengan benar dan pastikan data yang diinput sesuai dengan nominal yang benar</h2>
+
+    <!-- akses link script app -->
+    <form action="https://script.google.com/macros/s/AKfycbxsJ5vwvP1HV3QZ0YhqCcrNSHgjcOe15x_b_AiLFLahzocGrf7DKmM6PXRt8GtUK5b3yA/exec"method="post">
+    <!-- end akses  -->
+
+      <label for="tanggal">tanggal</label><br>
+      <input type="date" id="tanggal" name="tanggal" required><br>
+
+      <label for="agency">Handle Agency:</label><br>
+      <select id="agency" name="agency" required><br>
+        <option value="agency_option">Pilih...</option><br>
+        <option value="Collectius">Collectius</option><br>
+        <option value="MBA">MBA</option><br>
+        <option value="Dongyang">Dongyang</option><br>
+        
+      </select><br>
+
+      <label for="area">Area:</label><br>
+      <select id="area" name="area"required>Area<br>
+        <option value="area_option">Pilih...</option><br>
+        <option value="jakarta">Jakarta</option><br>
+        <option value="medan">Medan</option><br>
+        <option value="semarang">Semarang</option><br>
+        <option value="bandung">Bandung</option><br>
+        <option value="surabaya">Surabaya</option><br>
+        <option value="makassar">Makassar</option><br>
+      </select><br>
+
+      <label for="payment">Payment Today:</label><br>
+      <input type="number" id="payment" name="payment" required><br>
+
+      <label for="ptp">PTP:</label><br>
+      <input type="number" id="ptp" name="ptp" required><br>
+
+    
+      
+<h5> *Pastikan sebelum klik simpan data, semua data sudah diisi dengan benar dan sesuai </h5>
+
+      <input type="submit" value="Simpan Data">
+
+    </form>
+
+  </div>
+
+  <div id="footer">
+    Created And Maker Of This Project : Reza Avia
+  </div>
+
+<div id="footer">
+    Menjiplak langsung dapat dikenakan hak cipta (Copyright)
+  </div>
+
+</body>
+</html>
